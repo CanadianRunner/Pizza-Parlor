@@ -37,7 +37,6 @@ return startingPrice;
 
 //UI Logic
 
-$(document).ready(function() {
   $('form#customers-order').submit(function(e) {
     e.preventDefault();
     let pizzaCrust = $('#crust').val();
@@ -46,9 +45,9 @@ $(document).ready(function() {
     let pushedToppingsArray = $('input[type=checkbox][name=toppings]:checked').each(function() {let topping = $(this).val();
     pizzaToppingsArray.push(topping);});
     let newPizzaOrder = new Pizza(pizzaToppingsArray, pizzaCrust, pizzaSize);
-    let totalCost = newPizzaOrder.costCalculation()
-
-
-    
-  }
-}
+    let totalCost = newPizzaOrder.costCalculation();
+    $('.pizza_size').html(pizzaSize);
+    $('.total_cost').html(cost);
+    $('#show_string').show();
+  });
+});
