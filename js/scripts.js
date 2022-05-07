@@ -5,6 +5,7 @@ class Pizza {
     this.size = size;
     this.crust = crust;
     this.toppings = toppings;
+    console.log(size, crust, toppings)
   }
 }
 
@@ -56,7 +57,7 @@ $(document).ready(function () {
       let topping = $(this).val();
       pizzaToppingsArray.push(topping);
     });
-    let newPizzaOrder = new Pizza(pizzaToppingsArray, pizzaCrust, pizzaSize);
+    let newPizzaOrder = new Pizza(pizzaSize, pizzaCrust, pizzaToppingsArray);
     let totalCost = newPizzaOrder.costCalculation();
     $(".pizza_size").html(pizzaSize);
     $(".total_cost").html(cost);
