@@ -9,7 +9,8 @@ class Pizza {
   }
 }
 
-Pizza.prototype.costCalculation = () => {
+Pizza.prototype.costCalculation = function () {
+  console.log(this);
   const pizzaToppings = [
     "pepperoni",
     "cheese",
@@ -48,7 +49,8 @@ Pizza.prototype.costCalculation = () => {
 $(document).ready(function () {
   $("form#customers-order").submit(function (e) {
     e.preventDefault();
-    let pizzaCrust = $("#crust").val();
+    // let pizzaCrust = $("#crust").val();
+    let pizzaCrust = document.querySelector('input[name="crust"]:checked').value;
     let pizzaSize = $("#size").val();
     let pizzaToppingsArray = [];
     let pushedToppingsArray = $(
