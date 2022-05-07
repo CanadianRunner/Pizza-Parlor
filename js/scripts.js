@@ -39,7 +39,8 @@ return startingPrice;
 $(document).ready(function() {
   $('form#customers-order').submit(function(e) {
     e.preventDefault();
-    let pizzaSize = $('#size').val()
+    let pizzaCrust = $('#')
+    let pizzaSize = $('#size').val();
     let pizzaToppingsArray = [];
     
   }
