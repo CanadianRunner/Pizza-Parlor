@@ -9,7 +9,6 @@ class Pizza {
 }
 
 Pizza.prototype.costCalculation = () => {
-const pizzaCrusts =  ['thin', 'cheese-stuffed', 'new-york', 'chicago'];
 const pizzaToppings = ['pepperoni', 'cheese','pineapple', 'bacon', 'mushrooms', 'peppers'];
 let startingPrice = 12;
 this.toppings.forEach(function(topping) {
@@ -28,5 +27,20 @@ if(this.crust === "thin") {
 }
 if(this.size === 'medium') {
   startingPrice += 5;
-}else if(this.size)
+}else if(this.size === 'large') {
+  startingPrice += 6;
+}else if(this.size === 'extra-large') {
+  startingPrice += 7;
+}
+return startingPrice;
+}
+
+//UI Logic
+$(document).ready(function() {
+  $('form#customers-order').submit(function(e) {
+    e.preventDefault();
+    let pizzaSize = $('#size').val()
+    let pizzaToppingsArray = [];
+    
+  }
 }
