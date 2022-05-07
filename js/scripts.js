@@ -36,12 +36,19 @@ return startingPrice;
 }
 
 //UI Logic
+
 $(document).ready(function() {
   $('form#customers-order').submit(function(e) {
     e.preventDefault();
-    let pizzaCrust = $('#')
+    let pizzaCrust = $('#crust').val();
     let pizzaSize = $('#size').val();
     let pizzaToppingsArray = [];
+    let pushedToppingsArray = $('input[type=checkbox][name=toppings]:checked').each(function() {let topping = $(this).val();
+    pizzaToppingsArray.push(topping);});
+    let newPizzaOrder = new Pizza(pizzaToppingsArray, pizzaCrust, pizzaSize);
+    let totalCost = newPizzaOrder.costCalculation()
+
+
     
   }
 }

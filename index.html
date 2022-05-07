@@ -13,8 +13,7 @@
 <body>
 
   <div class="jumbotron">
-    <img src="img/epicodus-logo-300.png">
-    <h1>Welcome to the Epicodus Pizza Parlor!</h1>
+    <h1>Welcome to the <img src="img/epicodus-logo-300.png"> Pizza Parlor!</h1>
     <h3>Place your order below:</h3>
   </div>
   
@@ -33,10 +32,10 @@
       <div class="crust">
         <h3>Let's select our crust next!</h3>
         <h3>Crust:</h3>
-        <input type="radio" name="crust" value="thin">Thin crust <br>
-        <input type="radio" name="crust" value="cheese-stuffed">Cheese stuffed crust <br>
-        <input type="radio" name="crust" value="new-york">New York crust <br>
-        <input type="radio" name="crust" value="chicago">Chicago deep dish <br>
+        <input type="radio" name="crust" id="crust" value="thin">Thin crust <br>
+        <input type="radio" name="crust" id="crust" value="cheese-stuffed">Cheese stuffed crust <br>
+        <input type="radio" name="crust" id="crust" value="new-york">New York crust <br>
+        <input type="radio" name="crust" id="crust" value="chicago">Chicago deep dish <br>
       <div class="toppings">
         <h3>What toppings are we adding today?</h3>
         <h3>Toppings:</h3>
@@ -56,7 +55,14 @@
       <button type="submit" class="btn btn-primary">Place Order</button>
       </div>
     </div>
-  </form>
+  </form><br>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Fluid jumbotron</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  <p>Thank you for shopping at the Epicodus Pizza Parlor!  We hope you enjoy your meal and choose to dine with us again.</p>
 </body>
 <div class ="background_image">
   <img src="img/pizza-background.jpg">
