@@ -23,14 +23,38 @@
     <div class="container">
       <div class="pizza-size">
         <h3>Pizza Size:</h3>
-        <input type="radio" name="size" value="small">The part-time SMALL pizza <br>
-        <input type="radio" name="size" value="medium">The full-time MEDIUM pizza <br>
-        <input type="radio" name="size" value="large">The graduate LARGE pizza <br>
+        <select class="form-control" id="size">
+        <option value="small">The part-time SMALL pizza</option>
+        <option value="medium">The full-time MEDIUM pizza</option>
+        <option value="large">The graduate LARGE pizza</option>
+        <option value="large">The faculty EXTRA-LARGE pizza</option>
+      </select>
       </div>
-     
-      
+      <div class="crust">
+        <h3>Let's select our crust next!</h3>
+        <h3>Crust:</h3>
+        <input type="radio" name="crust" value="thin">Thin crust <br>
+        <input type="radio" name="crust" value="cheese-stuffed">Cheese stuffed crust <br>
+        <input type="radio" name="crust" value="new-york">New York crust <br>
+        <input type="radio" name="crust" value="chicago">Chicago deep dish <br>
+      <div class="toppings">
+        <h3>What toppings are we adding today?</h3>
+        <h3>Toppings:</h3>
+        <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label><br>
+        <input type="checkbox" id="cheese" name="toppings" value="cheese">
+        <label for="cheese">Cheese</label><br>
+        <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+        <label for="pineapple">Pineapple</label><br>
+        <input type="checkbox" id="bacon" name="toppings" value="bacon">
+        <label for="bacon">Bacon</label><br>
+        <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label><br>
+        <input type="checkbox" id="peppers" name="toppings" value="peppers">
+        <label for="peppers">Peppers</label><br>
+      </div>
+      </div>
     </div>
-
   </form>
 </body>
 <div class ="background_image">
