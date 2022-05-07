@@ -50,19 +50,17 @@ $(document).ready(function () {
   $("form#customers-order").submit(function (e) {
     e.preventDefault();
     // let pizzaCrust = $("#crust").val();
-    let pizzaCrust = document.querySelector('input[name="crust"]:checked').value;
+    let pizzaCrust = $('input[name="crust"]:checked').value;
     let pizzaSize = $("#size").val();
     let pizzaToppingsArray = [];
-    let pushedToppingsArray = $(
-      "input[type=checkbox][name=toppings]:checked"
-    ).each(function () {
+    let pushedToppingsArray = $("input[type=checkbox][name=toppings]:checked").each(function () {
       let topping = $(this).val();
       pizzaToppingsArray.push(topping);
     });
     let newPizzaOrder = new Pizza(pizzaSize, pizzaCrust, pizzaToppingsArray);
     let totalCost = newPizzaOrder.costCalculation();
     $(".pizza_size").html(pizzaSize);
-    $(".total_cost").html(cost);
+    $(".total_cost").html(totalCost);
     $("#show_string").show();
   });
 });
